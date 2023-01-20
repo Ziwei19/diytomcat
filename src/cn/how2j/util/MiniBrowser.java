@@ -110,7 +110,6 @@ public class MiniBrowser {
             }
 
             // request
-//            System.out.println("httpRequest = " + httpRequest.toString());
             PrintWriter pw = new PrintWriter(client.getOutputStream(), true);
             pw.println(httpRequest.toString());
 

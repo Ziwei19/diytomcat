@@ -20,10 +20,10 @@ public class TestTomcat {
     public static void beforeClass(){
 
         if (NetUtil.isUsableLocalPort(port)){
-            System.err.println("请先启动 位于端口: " +port+ " 的diy tomcat，否则无法进行单元测试");
+            System.err.println("Please boot up server: " +port+ " diy tomcat，Otherwise cannot carry out junit test");
             System.exit(1);
         } else {
-            System.out.println("检测到 diy tomcat已经启动，开始进行单元测试");
+            System.out.println("Diy tomcat has already been booted up, unit test starts...");
         }
     }
 
