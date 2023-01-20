@@ -13,7 +13,7 @@ public class Bootstrap {
         try{
             int port = 18080;
             if (!NetUtil.isUsableLocalPort(port)){
-                System.out.println("port + \" 端口已经被占用了，排查并关闭本端口的办法请用：\\r\\nhttps://how2j.cn/k/tomcat/tomcat-portfix/545.html\" = " + port + " 端口已经被占用了，排查并关闭本端口的办法请用：\r\nhttps://how2j.cn/k/tomcat/tomcat-portfix/545.html");
+                System.out.println("port + \" has been used，please use the method on this website to check and close ports：\\r\\nhttps://how2j.cn/k/tomcat/tomcat-portfix/545.html\" = " + port + " 端口已经被占用了，排查并关闭本端口的办法请用：\r\nhttps://how2j.cn/k/tomcat/tomcat-portfix/545.html");
                 return;
             }
 
@@ -27,7 +27,7 @@ public class Bootstrap {
                 is.read(buffer);
 
                 String requestString = new String(buffer, "utf-8");
-                System.out.println("浏览器的输入信息： \r\n" + requestString);
+                System.out.println("web browser input： \r\n" + requestString);
 
 
                 OutputStream os = s.getOutputStream();
